@@ -58,12 +58,12 @@ async function testWithRealUser() {
     email: adminUser.email!,
   });
 
-  if (error || !linkData?.properties?.access_token) {
+  if (error || !(linkData?.properties as any)?.access_token) {
     console.log('\n⚠️  Không tạo được test token:', error?.message);
     return;
   }
 
-  const testToken = linkData.properties.access_token;
+  const testToken = (linkData.properties as any).access_token;
   console.log('\n--- Verifying REAL admin token với raw secret ---');
   try {
     const result = jwt.verify(testToken, secret) as any;

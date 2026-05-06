@@ -8,7 +8,7 @@ const supabaseAdmin = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY!
 );
 
-async function createAccount(email, password, role) {
+async function createAccount(email: string, password: string, role: string) {
   console.log(`\n🔍 Checking user: ${email}`);
 
   // Check if user exists
