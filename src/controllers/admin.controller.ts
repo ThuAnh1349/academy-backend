@@ -231,8 +231,11 @@ export const updateCategory = async (req: Request, res: Response): Promise<void>
 export const updateCourse = async (req: Request, res: Response): Promise<void> => {
   try {
     const { id } = req.params;
-    const { title, slug, description, category, difficulty_level, xp_on_complete } = req.body;
-    const updateData = { title, slug, description, category, difficulty_level, xp_on_complete: parseInt(xp_on_complete) || 0 };
+    const { title, slug, description, category, difficulty_level, xp_on_complete, is_published } = req.body;
+    const updateData: any = { title, slug, description, category, difficulty_level, xp_on_complete: parseInt(xp_on_complete) || 0 };
+    if (is_published !== undefined) {
+      updateData.is_published = is_published;
+    }
     
     const { data, error } = await supabaseAdmin.from('courses').update(updateData).eq('id', id).select().single();
     if (error) throw error;
