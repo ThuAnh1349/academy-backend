@@ -1,0 +1,45 @@
+[
+  {
+    "id": "tuDuy",
+    "name": "Tư duy",
+    "key": "tuDuy",
+    "emoji": "🧠",
+    "color": "#06D6A0"
+  },
+  {
+    "id": "taiChinh",
+    "name": "Tài chính",
+    "key": "taiChinh",
+    "emoji": "💰",
+    "color": "#118AB2"
+  },
+  {
+    "id": "ngheNghiep",
+    "name": "Nghề nghiệp",
+    "key": "ngheNghiep",
+    "emoji": "💼",
+    "color": "#073B4C"
+  },
+  {
+    "id": "giaoTiep",
+    "name": "Giao tiếp",
+    "key": "giaoTiep",
+    "emoji": "🗣️",
+    "color": "#F78C6B"
+  },
+  {
+    "id": "sucKhoe",
+    "name": "Sức khoẻ",
+    "key": "sucKhoe",
+    "emoji": "🌱",
+    "color": "#8338EC"
+  },
+  {
+    "id": "muc1",
+    "name": "mục 1",
+    "key": "muc1",
+    "description": "",
+    "emoji": "📁",
+    "color": "#888"
+  }
+]
